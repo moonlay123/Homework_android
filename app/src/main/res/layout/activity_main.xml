@@ -4,19 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1C7A02"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@drawable/gradient_background">
     <TextView
-        android:layout_marginTop="300dp"
-        android:textSize="50px"
-        android:textColor="#02239A"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="Решатель квадратных уравнений"
+        android:textColor="#A50303"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/la"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="Введи а"
+        android:textSize="25sp"
+        android:textColorHint="#D80CA6"
+        android:layout_marginTop="10dp"
+        android:textColor="#D80CA6"
+        android:layout_width="250dp"
+        android:layout_height="50dp" />
+    <EditText
+        android:id="@+id/lb"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="Введи b"
+        android:textSize="25sp"
+        android:textColorHint="#D80CA6"
+        android:layout_marginTop="10dp"
+        android:textColor="#D80CA6"
+        android:layout_width="250dp"
+        android:layout_height="50dp" />
+    <EditText
+        android:id="@+id/lc"
+        android:inputType="numberSigned|numberDecimal"
+        android:hint="Введи c"
+        android:textSize="25sp"
+        android:textColorHint="#D80CA6"
+        android:textColor="#D80CA6"
+        android:layout_marginTop="10dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp" />
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Это правда так" />
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_marginTop="25dp"
+        android:textColor="#C800F4"
+        android:layout_marginTop="20dp"
+        android:text="Ваши x равны в общем виде:"
+        android:textSize="25sp"/>
+    <TextView
+        android:id="@+id/lans1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/beba" />
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFFFFF" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#C800F4"
+        android:layout_marginTop="20dp"
+        android:text="Ваши x равны:"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/lans2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:textColor="#FFFFFF" />
+    <Button
+        android:id="@+id/bub1"
+        android:onClick="click"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FB0000"
+        android:text="Решить"
+        />
+    <Button
+        android:id="@+id/bub2"
+        android:onClick="click"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#00FFE1"
+        android:text="Резня"/>
 </LinearLayout>
