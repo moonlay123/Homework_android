@@ -46,16 +46,16 @@ public class MainActivity extends AppCompatActivity {
             }
             else{
                 if(disk>0){
-                    editX1.setText("x1 = "+String.format("%.4f",-b)+"-√"+String.format("%.4f",disk)+"\n"+" x2 = "+String.format("%.4f",-b)+"+√"+String.format("%.4f",disk));
+                    editX1.setText("x1 = ("+String.format("%.4f",-b)+"-√"+String.format("%.4f",disk)+")/"+2*a+"\n"+" x2 = ("+String.format("%.4f",-b)+"+√"+String.format("%.4f",disk)+")/"+2*a);
                     editX2.setText("x1 = "+String.format("%.4f",(-b-Math.sqrt(disk))/(2*a))+"\n"+" x2 = "+String.format("%.4f",(-b+Math.sqrt(disk))/(2*a)));
                 }
                 else if(disk==0){
-                    editX1.setText("x1 = x2 = "+String.format("%.4f",-b));
-                    editX2.setText("x1 = x2 = "+String.format("%.4f",-b));
+                    editX1.setText("x1 = x2 = ("+String.format("%.4f",-b)+")/"+2*a);
+                    editX2.setText("x1 = x2 = "+String.format("%.4f",-b/(2*a)));
                 }
                 else{
-                    editX1.setText("x1 = "+String.format("%.4f",-b)+"-i√"+String.format("%.4f",-disk)+"\n"+" x2 = "+String.format("%.4f",-b)+"+i√"+String.format("%.4f",-disk));
-                    editX2.setText("x1 = "+String.format("%.4f",-b)+"-i√"+String.format("%.4f",-disk)+"\n"+" x2 = "+String.format("%.4f",-b)+"+i√"+String.format("%.4f",-disk));
+                    editX1.setText("x1 = ("+String.format("%.4f",-b)+"-i√"+String.format("%.4f",-disk)+")/"+2*a+"\n"+" x2 = ("+String.format("%.4f",-b)+"+i√"+String.format("%.4f",-disk)+")/"+2*a);
+                    editX2.setText("x1 = ("+String.format("%.4f",-b)+"-i√"+String.format("%.4f",-disk)+")/"+2*a+"\n"+" x2 = ("+String.format("%.4f",-b)+"+i√"+String.format("%.4f",-disk)+")/"+2*a);
                 }
                 Toast.makeText(this,a+" * x² + "+b+" * x = "+c,Toast.LENGTH_LONG).show();
             }
